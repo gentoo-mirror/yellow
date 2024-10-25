@@ -8,22 +8,19 @@ EAPI=8
 CRATES="
 "
 
-MY_PV="${PV//_rc/-rc}"
-
 inherit bash-completion-r1 cargo desktop
 
-DESCRIPTION="GPU-accelerated terminal emulator"
+DESCRIPTION="GPU-accelerated terminal emulator with sixel support"
 HOMEPAGE="https://alacritty.org"
 
 if [ ${PV} == "9999" ] ; then
 	inherit git-r3
 else
-	SRC_URI="https://github.com/${PN}/${PN}/archive/refs/tags/v${MY_PV}.tar.gz -> ${P}.tar.gz
+	SRC_URI="https://github.com/ayosec/alacritty/archive/refs/tags/v${PV}-graphics.tar.gz -> ${P}.tar.gz
 		${CARGO_CRATE_URIS}"
 	KEYWORDS="~amd64 ~arm64 ~ppc64 ~riscv ~x86"
+S="${WORKDIR}/alacritty-${PV}-graphics"
 fi
-
-S="${WORKDIR}/${PN}-${MY_PV}"
 
 LICENSE="Apache-2.0"
 # Dependent crate licenses
@@ -34,7 +31,7 @@ LICENSE+="
 
 SLOT="0"
 
-IUSE="+wayland X sixel doc"
+IUSE="+wayland X doc"
 
 REQUIRED_USE="|| ( wayland X )"
 
@@ -59,21 +56,14 @@ RDEPEND="${DEPEND}
 
 BDEPEND="
 	dev-build/cmake
-	>=virtual/rust-1.70.0
+	>=virtual/rust-1.74.0
 	app-text/scdoc
 "
 
-QA_FLAGS_IGNORED="usr/bin/alacritty"
-
 src_unpack() {
 	if [[ "${PV}" == *9999* ]]; then
-		if use sixel;then
-			UPSTREAM=ayosec
-			EGIT_BRANCH=graphics
-		else
-			UPSTREAM="${PN}"
-		fi
-		EGIT_REPO_URI="https://github.com/${UPSTREAM}/alacritty"
+		EGIT_BRANCH=graphics
+		EGIT_REPO_URI="https://github.com/ayosec/alacritty"
 		git-r3_src_unpack
 		cargo_live_src_unpack
 	else
@@ -102,7 +92,7 @@ src_compile() {
 src_install() {
 	cargo_src_install --path alacritty
 
-	doman alacritty.1 alacritty.5 alacritty-msg.1 alacritty-bindings.5
+	doman alacritty.{1,5} alacritty-msg.1 alacritty-bindings.5
 
 	newbashcomp extra/completions/alacritty.bash alacritty
 
@@ -113,13 +103,15 @@ src_install() {
 	doins extra/completions/_alacritty
 
 	domenu extra/linux/Alacritty.desktop
-	newicon extra/logo/compat/alacritty-term.svg Alacritty.svg
+	newicon -s scalable extra/logo/compat/alacritty-term+scanlines.svg Alacritty.svg
+	newicon -s 512 extra/logo/compat/alacritty-term+scanlines.png Alacritty.png
+	newicon -s 64 extra/logo/compat/alacritty-term.png Alacritty.png
 
 	insinto /usr/share/metainfo
 	doins extra/linux/org.alacritty.Alacritty.appdata.xml
 
-	insinto /usr/share/alacritty/scripts
-	doins -r scripts/*
+	insinto /usr/share/alacritty
+	doins -r scripts
 
 	if use doc; then
 		local DOCS=(
@@ -141,6 +133,6 @@ pkg_postinst() {
 		einfo "in \$HOME often need to be updated after a version change"
 		einfo ""
 		einfo "For information on how to configure ${PN}, see the manpage:"
-		einfo "man 5 ${PN}"
+		einfo "man 5 alacritty"
 	fi
 }

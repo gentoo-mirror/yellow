@@ -1,15 +1,15 @@
-BDEPEND=dev-build/cmake >=virtual/rust-1.70.0 app-text/scdoc >=virtual/rust-1.53 >=dev-vcs/git-1.8.2.1[curl]
+BDEPEND=dev-build/cmake >=virtual/rust-1.74.0 app-text/scdoc >=virtual/rust-1.53 >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile configure install postinst test unpack
 DEPEND=media-libs/fontconfig:= media-libs/freetype:2 x11-libs/libxkbcommon X? ( x11-libs/libxcb:= )
-DESCRIPTION=GPU-accelerated terminal emulator
+DESCRIPTION=GPU-accelerated terminal emulator with sixel support
 EAPI=8
 HOMEPAGE=https://alacritty.org
 INHERIT=bash-completion-r1 cargo desktop git-r3
-IUSE=+wayland X sixel doc debug
+IUSE=+wayland X doc debug
 LICENSE=Apache-2.0 Apache-2.0 BSD-2 BSD Boost-1.0 CC0-1.0 ISC MIT MPL-2.0 Unicode-DFS-2016
 PROPERTIES=live
 RDEPEND=media-libs/fontconfig:= media-libs/freetype:2 x11-libs/libxkbcommon X? ( x11-libs/libxcb:= ) media-libs/mesa[X?,wayland?] sys-libs/zlib sys-libs/ncurses:0 wayland? ( dev-libs/wayland ) X? ( x11-libs/libXcursor x11-libs/libXi x11-libs/libXrandr )
 REQUIRED_USE=|| ( wayland X )
 SLOT=0
 _eclasses_=toolchain-funcs	d3d42b22a610ce81c267b644bcec9b87	multilib	b2a329026f2e404e9e371097dda47f96	bash-completion-r1	767861f3744f589ee5291c1698b1c082	flag-o-matic	f14aba975c94ccaa9f357a27e3b17ffe	multiprocessing	1e32df7deee68372153dca65f4a7c21f	cargo	5c0d80931fe6eaee6550c7fecf982ac9	desktop	3a72ffe0d8e1dd73af3a1c8c15a59fed	git-r3	875eb471682d3e1f18da124be97dcc81
-_md5_=bd435df1d71f152e1832744db8d6bfda
+_md5_=15e7eba5d5201e7f124ea6afac7901b4
