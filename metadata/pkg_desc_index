@@ -1,0 +1,28 @@
+app-emulation/virt-manager 4.1.0-r2: A graphical tool for administering virtual machines
+app-misc/solaar 1.1.13-r1: Linux Device Manager for Logitech Unifying Receivers and Paired Devices
+app-text/light 1.2.2-r0: A program to control backlight (and other hardware lights)
+dev-python/better-exceptions 0.2.1-r1: Pretty and useful exceptions in Python, automatically.
+dev-python/factory_boy 3.3.1: A versatile test fixtures replacement based on thoughtbot's factory_bot for Ruby
+dev-python/flask_sqlalchemy 3.1.1: Add SQLAlchemy support to your Flask application.
+dev-python/gaphas 4.1.1-r1: Generic programming library for Python
+dev-python/generic 1.1.3: Generic programming library for Python
+dev-python/model_bakery 1.20.0: Smart object creation facility for Django
+dev-python/pytest-archon 0.0.6: Rule your architecture like a real developer
+dev-python/pytest-randomly 3.15.0-r1: Pytest plugin to randomly order tests and control random.seed
+dev-python/sphinx-intl 2.2.0: Sphinx utility that make it easy to translate and to apply translation.
+dev-util/gaphor 2.27.0-r1: Gaphor is the simple modeling tool
+dev-util/mesonlsp 4.3.7-r1: An unofficial, unendorsed language server for meson written in C++
+dev-util/zig-hash 20241021: Shell script to compute zig dependency hashes
+dev-util/zls 0.13.0: Zig language server
+gui-apps/alacritty-graphics 0.14.0 9999: GPU-accelerated terminal emulator with sixel support
+gui-apps/coppwr 1.6.0-r1 1.6.1: Low level control GUI for the PipeWire multimedia server
+gui-apps/sov 0.94: Sway app that shows schemas for all workspaces to make navigation in sway easier
+gui-apps/waybar 0.11.0: Highly customizable Wayland bar for Sway and Wlroots based compositors
+gui-apps/waylock 1.2.1: Small screenlocker for Wayland compositors
+gui-apps/wayprompt 0.1.2: A multi-purpose (password-)prompt tool for Wayland
+gui-apps/wdisplays 1.1.1 9999: wdisplays is a wayland app for configuring displays in compositors.
+gui-apps/wshowkeys 0.1.0 0.1.1 0.1.2 0.2.0 9999-r0: Displays keypresses on screen on supported compositors
+gui-wm/river 0.3.5-r2: dynamic tiling Wayland compositor with flexible runtime configuration
+media-libs/libcava 0.10.2: Console-based Audio Visualizer for Alsa
+sec-keys/openpgp-keys-ifreund 20241019: OpenPGP keys used by ifreund to sign releases
+sys-fs/ncdu 2.6: NCurses Disk Usage
