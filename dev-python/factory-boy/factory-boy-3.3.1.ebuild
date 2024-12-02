@@ -15,11 +15,11 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
 
-DEPEND="dev-python/Faker"
+DEPEND="dev-python/faker"
 RDEPEND="${DEPEND}"
 BDEPEND="
 	test? (
-		dev-python/flask_sqlalchemy
+		dev-python/flask-sqlalchemy
 	)
 "
 

@@ -21,7 +21,7 @@ IUSE="doc test"
 RESTRICT="test"
 
 DEPEND="
-	dev-python/Babel
+	dev-python/babel
 	dev-python/better-exceptions
 	dev-python/defusedxml
 	dev-python/dulwich
