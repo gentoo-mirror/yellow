@@ -23,7 +23,7 @@ DEPEND="
 	${PYTHON_DEPS}
 	dev-python/pytest
 	test? (
-		dev-python/Faker
+		dev-python/faker
 		dev-python/pytest-xdist
 	)
 	"

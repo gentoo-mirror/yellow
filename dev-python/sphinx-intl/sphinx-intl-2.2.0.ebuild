@@ -19,7 +19,7 @@ KEYWORDS="~amd64"
 DEPEND="
 	${PYTHON_DEPS}
 	dev-python/click
-	dev-python/Babel
+	dev-python/babel
 	dev-python/sphinx
 	"
 RDEPEND="${DEPEND}"
