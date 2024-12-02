@@ -2,11 +2,11 @@ app-emulation/virt-manager 4.1.0-r2: A graphical tool for administering virtual 
 app-misc/solaar 1.1.13-r1: Linux Device Manager for Logitech Unifying Receivers and Paired Devices
 app-text/light 1.2.2-r0: A program to control backlight (and other hardware lights)
 dev-python/better-exceptions 0.2.1-r1: Pretty and useful exceptions in Python, automatically.
-dev-python/factory_boy 3.3.1: A versatile test fixtures replacement based on thoughtbot's factory_bot for Ruby
-dev-python/flask_sqlalchemy 3.1.1: Add SQLAlchemy support to your Flask application.
+dev-python/factory-boy 3.3.1: A versatile test fixtures replacement based on thoughtbot's factory_bot for Ruby
+dev-python/flask-sqlalchemy 3.1.1: Add SQLAlchemy support to your Flask application.
 dev-python/gaphas 4.1.1-r1: Generic programming library for Python
 dev-python/generic 1.1.3: Generic programming library for Python
-dev-python/model_bakery 1.20.0: Smart object creation facility for Django
+dev-python/model-bakery 1.20.0: Smart object creation facility for Django
 dev-python/pytest-archon 0.0.6: Rule your architecture like a real developer
 dev-python/pytest-randomly 3.15.0-r1: Pytest plugin to randomly order tests and control random.seed
 dev-python/sphinx-intl 2.2.0: Sphinx utility that make it easy to translate and to apply translation.
