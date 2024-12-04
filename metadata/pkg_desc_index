@@ -10,7 +10,7 @@ dev-python/model-bakery 1.20.0: Smart object creation facility for Django
 dev-python/pytest-archon 0.0.6: Rule your architecture like a real developer
 dev-python/pytest-randomly 3.15.0-r1: Pytest plugin to randomly order tests and control random.seed
 dev-python/sphinx-intl 2.2.0: Sphinx utility that make it easy to translate and to apply translation.
-dev-util/gaphor 2.27.0-r1: Gaphor is the simple modeling tool
+dev-util/gaphor 2.27.0-r1 2.27.0-r2: Gaphor is the simple modeling tool
 dev-util/mesonlsp 4.3.7-r1: An unofficial, unendorsed language server for meson written in C++
 dev-util/zig-hash 20241021: Shell script to compute zig dependency hashes
 dev-util/zls 0.13.0: Zig language server
