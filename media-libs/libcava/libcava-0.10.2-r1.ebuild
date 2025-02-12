@@ -22,7 +22,7 @@ KEYWORDS="amd64 x86"
 IUSE="alsa jack ncurses pipewire portaudio pulseaudio sdl sndio"
 
 RDEPEND="
-	dev-libs/iniparser:4
+	dev-libs/iniparser:0/4
 	sci-libs/fftw:3.0=
 	alsa? ( media-libs/alsa-lib )
 	jack? ( virtual/jack )

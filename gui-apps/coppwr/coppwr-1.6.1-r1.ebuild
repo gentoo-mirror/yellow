@@ -7,8 +7,6 @@
 
 EAPI=8
 
-RESTRICT="mirror"
-
 CRATES="
 	ab_glyph@0.2.29
 	ab_glyph_rasterizer@0.1.8
@@ -434,13 +432,15 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
 
+RESTRICT="mirror"
+
 DEPEND="
 	media-video/pipewire
 	"
 RDEPEND="${DEPEND}"
 BDEPEND="
 	>=dev-lang/rust-1.72.0
-	>=sys-devel/clang-5.0.0
+	>=llvm-core/clang-5.0.0
 	"
 
 # rust does not use *FLAGS from make.conf, silence portage warning

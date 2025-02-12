@@ -59,7 +59,7 @@ DEPEND="${RDEPEND}
 	cava? ( >=media-libs/libcava-0.10.2[jack?,pipewire?,pulseaudio?,sndio?] )
 	evdev? ( dev-libs/libevdev:= )
 	jack? ( virtual/jack )
-	libcxx? ( sys-libs/libcxx )
+	libcxx? ( llvm-runtimes/libcxx )
 	libinput? ( dev-libs/libinput:= )
 	logind? ( || ( sys-apps/systemd sys-auth/elogind ) )
 	mpd? ( media-libs/libmpdclient )
