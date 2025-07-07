@@ -7,8 +7,8 @@ EAPI=8
 inherit git-r3 meson
 
 DESCRIPTION="wdisplays is a wayland app for configuring displays in compositors."
-HOMEPAGE="https://github.com/artizirk/wdisplays"
-EGIT_REPO_URI="https://github.com/artizirk/${PN}.git"
+HOMEPAGE="https://github.com/JasonGantner/wdisplays"
+EGIT_REPO_URI="https://github.com/JasonGantner/${PN}.git"
 
 LICENSE="MIT GPL-3+ CC0-1.0 CC-BY-SA-4.0"
 SLOT="0"
