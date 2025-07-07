@@ -12,8 +12,8 @@ dev-util/gaphor 2.27.0-r2 3.0.0: Gaphor is the simple modeling tool
 dev-util/mesonlsp 4.3.7-r1 4.3.7-r2: An unofficial, unendorsed language server for meson written in C++
 dev-util/zig-hash 20241021: Shell script to compute zig dependency hashes
 dev-util/zls 0.13.0: Zig language server
-gui-apps/alacritty-graphics 0.14.0 0.15.0 0.15.1 9999: GPU-accelerated terminal emulator with sixel support
-gui-apps/coppwr 1.6.1-r1: Low level control GUI for the PipeWire multimedia server
+gui-apps/alacritty-graphics 0.15.1-r1 9999: GPU-accelerated terminal emulator with sixel support
+gui-apps/coppwr 1.6.1-r2: Low level control GUI for the PipeWire multimedia server
 gui-apps/sov 0.94: Sway app that shows schemas for all workspaces to make navigation in sway easier
 gui-apps/waybar 0.11.0-r2: Highly customizable Wayland bar for Sway and Wlroots based compositors
 gui-apps/waylock 1.2.1: Small screenlocker for Wayland compositors
