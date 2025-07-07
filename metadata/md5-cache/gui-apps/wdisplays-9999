@@ -3,7 +3,7 @@ DEFINED_PHASES=compile configure install test unpack
 DEPEND=>=x11-libs/gtk+-3.24 media-libs/libepoxy dev-libs/wayland
 DESCRIPTION=wdisplays is a wayland app for configuring displays in compositors.
 EAPI=8
-HOMEPAGE=https://github.com/artizirk/wdisplays
+HOMEPAGE=https://github.com/JasonGantner/wdisplays
 INHERIT=git-r3 meson
 IUSE=+scour
 KEYWORDS=~amd64
@@ -12,4 +12,4 @@ PROPERTIES=live
 RDEPEND=>=x11-libs/gtk+-3.24 media-libs/libepoxy dev-libs/wayland
 SLOT=0
 _eclasses_=git-r3	875eb471682d3e1f18da124be97dcc81	toolchain-funcs	a6df79c1e9bc84369dbf3d44206ac772	flag-o-matic	a7afe42e95fb46ce9691605acfb24672	multiprocessing	1e32df7deee68372153dca65f4a7c21f	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	python-utils-r1	5ffe8ec396a751540949b565de0f048c	meson	99466844dd8d4fcfb07578a76f5a9922
-_md5_=c3122fb071b85cab74c562b77ea288ae
+_md5_=fe03e907250618108ccadbdbaaf032c5
