@@ -417,6 +417,8 @@ declare -A GIT_CRATES=(
 	[libspa-sys]="https://gitlab.freedesktop.org/dimtpap/pipewire-rs;605d15996f3258b3e1cc34e445dfbdf16a366c7e;pipewire-rs-%commit%/libspa-sys"
 )
 
+RUST_MIN_VER="1.72.0"
+
 inherit cargo desktop
 
 DESCRIPTION="Low level control GUI for the PipeWire multimedia server"
@@ -439,13 +441,13 @@ DEPEND="
 	"
 RDEPEND="${DEPEND}"
 BDEPEND="
-	>=dev-lang/rust-1.72.0
+	${RUST_DEPEND}
 	>=llvm-core/clang-5.0.0
 	"
 
-# rust does not use *FLAGS from make.conf, silence portage warning
-# update with proper path to binaries this crate installs, omit leading /
-QA_FLAGS_IGNORED="usr/bin/${PN}"
+pkg_setup(){
+	rust_pkg_setup
+}
 
 src_install(){
 	domenu assets/io.github.dimtpap.coppwr.desktop

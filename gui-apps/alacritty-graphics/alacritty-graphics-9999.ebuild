@@ -8,6 +8,8 @@ EAPI=8
 CRATES="
 "
 
+RUST_MIN_VERSION="1.74.0"
+
 inherit bash-completion-r1 cargo desktop
 
 DESCRIPTION="GPU-accelerated terminal emulator with sixel support"
@@ -18,9 +20,10 @@ if [ ${PV} == "9999" ] ; then
 else
 	SRC_URI="https://github.com/ayosec/alacritty/archive/refs/tags/v${PV}-graphics.tar.gz -> ${P}.tar.gz
 		${CARGO_CRATE_URIS}"
-	KEYWORDS="~amd64 ~arm64 ~ppc64 ~riscv ~x86"
-S="${WORKDIR}/alacritty-${PV}-graphics"
+	KEYWORDS="~amd64 ~arm64 ~ppc64 ~riscv"
 fi
+
+S="${WORKDIR}/alacritty-${PV}-graphics"
 
 LICENSE="Apache-2.0"
 # Dependent crate licenses
@@ -32,8 +35,9 @@ LICENSE+="
 SLOT="0"
 
 IUSE="+wayland X doc"
-
 REQUIRED_USE="|| ( wayland X )"
+
+RESTRICT="mirror"
 
 DEPEND="
 	media-libs/fontconfig:=
@@ -43,6 +47,7 @@ DEPEND="
 "
 
 RDEPEND="${DEPEND}
+	!x11-terms/alacritty
 	media-libs/mesa[X?,wayland?]
 	sys-libs/zlib
 	sys-libs/ncurses:0
@@ -56,8 +61,8 @@ RDEPEND="${DEPEND}
 
 BDEPEND="
 	dev-build/cmake
-	>=virtual/rust-1.74.0
 	app-text/scdoc
+	${RUST_DEPEND}
 "
 
 src_unpack() {
