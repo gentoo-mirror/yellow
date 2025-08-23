@@ -18,7 +18,7 @@ gui-apps/sov 0.94: Sway app that shows schemas for all workspaces to make naviga
 gui-apps/waybar 0.11.0-r2: Highly customizable Wayland bar for Sway and Wlroots based compositors
 gui-apps/waylock 1.2.1: Small screenlocker for Wayland compositors
 gui-apps/wayprompt 0.1.2: A multi-purpose (password-)prompt tool for Wayland
-gui-apps/wdisplays 1.1.1 9999: wdisplays is a wayland app for configuring displays in compositors.
+gui-apps/wdisplays 1.1.1 1.1.2 9999: wdisplays is a wayland app for configuring displays in compositors.
 gui-apps/wshowkeys 0.1.0 0.1.1 0.2.0 9999: Displays keypresses on screen on supported compositors
 gui-wm/river 0.3.5-r2: dynamic tiling Wayland compositor with flexible runtime configuration
 media-libs/libcava 0.10.2-r1: Console-based Audio Visualizer for Alsa
